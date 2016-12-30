@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="form.js">
+</script>
+</head>
+<body>
+<form name="login" id="log" action="#" method="post">
+	<p><input type="text"  name="name" id="name" placeholder="name"> </p>
+	<button type="button" onclick="add();"> submit</button>
+</form>
+<script type="text/javascript">
+function Person(name)
+{
+	this.name=name;
+	this.display=function()
+	{
+		alert("my name is  "+this.name);
+	}
+}
+function add()
+{
+	var n=document.getElementById("name").value;
+	var obj=new Person(n);
+	obj.display();
+}	
+
+</script>
+</body>
+</html>

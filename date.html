@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1 id="count"></h1>
+<table>
+<tr>
+<td>Date</td>
+<td>
+ <input type="text" id="date" placeholder="date">
+ </td>
+ </tr>
+ <tr>
+ <td>year</td>
+ <td>
+ <input type="text" id="year" placeholder="year">
+ </td>
+ </tr>
+ <tr>
+ <td>Month</td>
+ <td>
+ <input type="text" id="month" placeholder="month">
+ </td>
+ </tr>
+ <tr>
+ <td>Day</td>
+ <td>
+  <input type="text" id="day" placeholder="day">
+  </td>
+   </tr>
+ <tr>
+ <td>Hours</td>
+ <td>
+ <input type="text" id="hour" placeholder="hours">
+ </td>
+  </tr>
+ <tr>
+<td>Minutes</td>
+ <td>
+  <input type="text" id="minute" placeholder="minutes">
+  </td>
+   </tr>
+ <tr>
+ <td>Seconds</td>
+ <td>
+ <input type="text" id="second" placeholder="seconds">
+ </td>
+  </tr>
+ </table>
+ <p><button type="button" onclick="showDate();"> Date </button></p>
+ <script type="text/javascript">
+ //document.getElementById("count").innerHTML=
+ var count=0;
+setInterval(function(){
+	// console.log(count++);
+	count++;
+	var min=parseInt(count/60);
+	var sec=count%60;
+	var hr=parseInt(min/60);
+	min=min%60;
+	document.getElementById("count").innerHTML=hr+" hours "+min+" minutes "+sec+"seconds";
+},1000)
+function showDate()
+{
+var curdate=new Date();
+document.getElementById("date").value=curdate;
+document.getElementById("year").value=curdate.getFullYear();
+document.getElementById("month").value=curdate.getMonth();
+document.getElementById("day").value=curdate.getDate();
+document.getElementById("hour").value=curdate.getHours();
+document.getElementById("minute").value=curdate.getMinutes();
+document.getElementById("second").value=curdate.getSeconds();
+}
+ </script>
+</body>
+</html>

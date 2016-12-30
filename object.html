@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+var br="<br>"
+function object()
+{
+	var car={
+		name:"TATA",
+		price:12345678,
+		set_pro:function()
+		{
+			console.log(car.name);
+        	car.name="BMW";
+        	console.log(car.name);
+		}
+
+
+	};
+	 document.getElementById('head').innerHTML="Car";
+	 document.getElementById('para').innerHTML="name :"+car.name+br+"  price:"+car.price;
+	car.set_pro();
+
+
+}
+</script>
+<h1 id="head"> </h1>
+<p id="para"> </p>
+<button type="button" onclick="object();">
+	Object eg
+</button>
+</body>
+</html>

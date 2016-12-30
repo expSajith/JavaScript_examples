@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Birth Year</title>
+</head>
+<body>
+<center>
+	<input type="number" id="age" placeholder="enter your age" style="padding:10px; width:300px; height:20px; margin-top:50px;">
+	<button type="button" id="button">Find year</button>
+	<p id="para"> </p>
+</center>
+<script>
+document.getElementById("button").onclick=findYear;
+function findYear()
+{
+
+	var age=parseInt(document.getElementById("age").value);
+	var year=(new Date()).getFullYear();
+	if(age>=0 && !isNaN(age))
+	{
+		document.getElementById("para").innerHTML="Birth Year is  "+(year-age);
+	}
+	else{
+		alert("Invalid age");
+	}
+}
+</script>
+</body>
+</html>

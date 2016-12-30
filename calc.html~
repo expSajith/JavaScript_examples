@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> SIMPLE CALCULATOR</title>
+	<script type="text/javascript" src="calc.js"></script>
+</head>
+<body>
+	<div id="screen">
+		<div id="operation">
+			<button type="button" onclick="opp('+');">
+				+
+			</button>
+			<button type="button" onclick="opp('-');">
+				-
+			</button>
+			<button type="button" onclick="opp('*');">
+				*
+			</button>
+			<button type="button" onclick="opp('/');">
+				/
+			</button>
+		</div>
+		<div id="display">
+			<p><input type="text" id="op1" placeholder="enter num"> </p>
+			<p><input type="text" id="op" readonly="true"> </p>
+			<p><input type="text" id="op2" placeholder="enter num"> </p>
+			<p><button type="button" onclick="answer();">
+				ANS
+			</button></p>
+			<p><input type="text" id="ans" readonly="true"> </p>
+		</div>
+	</div>
+</body>
+</html>

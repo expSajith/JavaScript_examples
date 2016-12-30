@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Square of number</title>
+</head>
+<body>
+<input type="text" id="string" placeholder="enter numbers: seperate using comma's" >
+<input type="text" id="square"  placeholder="sqaure's" readonly="true">
+<button type="button" onclick="findSquare();"> SQUARE</button>
+<script type="text/javascript">
+	function findSquare()
+	{
+		var str=document.getElementById("string").value;
+		var ar=str.split(',');
+		var sq=ar.map(function(x){
+			return parseInt(x)*parseInt(x);
+		});
+	   document.getElementById("square").value=sq;
+	}
+</script>
+</body>
+</html>

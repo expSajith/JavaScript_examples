@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax example</title>
+</head>
+<body>
+	<div id="aj">
+		<h1> Ajax example </h1>
+		<p id="example"> </p>
+		<p> <button type="button" onclick="getContent();">ajax content</button> </p>
+	</div>
+	<script type="text/javascript">
+		function getContent()
+		{
+			var httpObj=new	XMLHttpRequest();
+			httpObj.onreadystatechange=function()
+
+			{
+				console.log(this.readyState);
+				if(this.readyState=='4'&& this.status=='200')
+				{
+					var result=this.responseText;
+					console.log(result);
+					document.getElementById("example").innerHTML=result;
+				}
+			}
+
+			httpObj.open('GET','ajax.txt',true);
+			httpObj.send();
+		}
+	</script>
+</body>
+</html>

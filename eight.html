@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<form  onsubmit="return maximum();">
+<input type="text" id="max" placeHolder="maximum value" readonly="true">
+<button type="submit"> click me</button>
+</form>
+<script type="text/javascript">
+function maximum()
+{
+	var a=[1,2,5,7,3];
+	var n=a.length;
+	var max=a[0];
+	var i;
+	for(i=1;i<=n;i++)
+	{
+		if(a[i]>max)
+		{
+			max=a[i];
+		}
+	}
+	console.log(max);
+	document.getElementById("max").value=max;
+	return false;
+}
+</script>
+</body>
+</html>

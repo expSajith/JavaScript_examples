@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+width
+<select id="width"> 
+	<option value="100px">100px</option>
+	<option value="200px">200px</option>
+	<option value="400px">400px</option>
+</select>
+<select id="height"> 
+	<option value="100px">100px</option>
+	<option value="200px">200px</option>
+	<option value="400px">400px</option>
+</select>
+<select id="background-color"> 
+	<option value="red">Red</option>
+	<option value="blue">Blue</option>
+	<option value="green">Green</option>
+</select>
+<br>
+<div id="content" style="width:100px; height:100px; background-color:red">
+</div>
+
+<script type="text/javascript">
+var selects=document.getElementsByTagName('select');
+var element=document.getElementById('content');
+function changeStyle()
+{
+
+	var style=this.id;
+	var value=this.value;
+	element.style[style]=value;
+}
+for(var i=0;i<selects.length;i++)
+{
+	selects[i].addEventListener('change',changeStyle);
+}
+
+</script>
+</body>
+</html>

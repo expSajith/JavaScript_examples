@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vowel word</title>
+</head>
+<body>
+<input type="text" id="string" placeholder="enter a char here" >
+<input type="text" id="v"  placeholder="vowel or not" readonly="true">
+<button type="button" onclick="check();"> check for vowel</button>
+<script type="text/javascript">
+	function check()
+	{
+		var str=document.getElementById("string").value;
+		var status="";
+		if(str.search(/[aeiou]/i)>=0)
+		{
+			status="true";
+		}
+		else
+		{
+			status="false";
+		}
+	 document.getElementById("v").value=status;
+	}
+</script>
+</body>
+</html>

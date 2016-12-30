@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> SIMPLE CALCULATOR</title>
+	<script type="text/javascript" src="calculator.js"></script>
+</head>
+<body>
+	<div id="screen">
+		<div id="operation">
+			<button type="button" onclick="add();">
+				+
+			</button>
+			<button type="button" onclick="sub();">
+				-
+			</button>
+			<button type="button" onclick="mul();">
+				*
+			</button>
+			<button type="button" onclick="div();">
+				/
+			</button>
+		</div>
+		<div id="display">
+			<p><input type="text" id="op1" placeholder="enter num"> </p>
+			<p><input type="text" id="op"> </p>
+			<p><input type="text" id="op2" placeholder="enter num"> </p>
+			<p><button type="button" onclick="answer();">
+				ANS
+			</button></p>
+			<p><input type="text" id="ans"> </p>
+		</div>
+	</div>
+</body>
+</html>

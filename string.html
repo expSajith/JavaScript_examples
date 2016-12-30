@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<table>
+	<tr>
+	<td>concat</td>
+	<td> <input type="text" id="concat"> </td>
+	</tr>
+	<tr>
+	<td>length of string1</td>
+	<td> <input type="text" id="length"> </td>
+	</tr>
+	<tr>
+	<td>slice</td>
+	<td> <input type="text" id="slice"> </td>
+	</tr>
+	<tr>
+	<td>substring</td>
+	<td> <input type="text" id="substring"> </td>
+	</tr>
+	<tr>
+	<td>index Of l</td>
+	<td> <input type="text" id="index"> </td>
+	</tr>
+	<tr>
+	<td>last Index Of l</td>
+	<td> <input type="text" id="l_index"> </td>
+	</tr>
+	<tr>
+	<td>substr</td>
+	<td> <input type="text" id="substr"> </td>
+	</tr>
+	<tr>
+	<td>string1 in uppercase</td>
+	<td> <input type="text" id="upper"> </td>
+	</tr>
+	<tr>
+	<td>string2 in lowercase</td>
+	<td> <input type="text" id="lower"> </td>
+	</tr>
+	<tr>
+	<td>char at pos (string 1)</td>
+	<td> <input type="text" id="pos"> </td>
+	</tr>
+	<tr>
+	<td>replace with substring</td>
+	<td> <input type="text" id="replace"> </td>
+	</tr>
+	<tr>
+	<td>
+	<input type="button"  value="string opr" onclick="operation();">
+	</td>
+	</tr>
+</table>
+<script type="text/javascript">
+function operation()
+{
+	var str1=prompt("enter string 1","hello");
+	var str2=prompt("enter string 2","world");
+	document.getElementById('concat').value=str1.concat(str2);
+	document.getElementById("length").value=str1.length;
+	document.getElementById("upper").value=str1.toUpperCase();
+	document.getElementById("lower").value=str2.toLowerCase();
+	function Substr()
+	{
+		var start=prompt("enter starting pos for slice ",0);
+		var end=prompt("enter ending pos for slice ",3);
+		document.getElementById("slice").value=str1.slice(start,end);
+		document.getElementById("substring").value=str1.substring(start,end);
+		start=prompt("enter starting pos for substr ",0);
+		end=prompt("enter length for substring",3);
+		document.getElementById("substr").value=str1.substr(start,end);	
+		index();
+	}
+
+	function index()
+	{
+		var index=prompt("enter a letter for finding  first index ","i");
+		document.getElementById("index").value=str1.indexOf(index);
+		 index=prompt("enter a letter for finding  last index ","i");
+	    document.getElementById("l_index").value=str1.lastIndexOf(index);
+	}
+	Substr();
+	var search=prompt("enter a position value ");
+	document.getElementById("pos").value=str1.charAt(search);
+	search=prompt("enter a substring in string1 ");
+	var newstr=prompt("enter new substring ");
+	var str3=str1.replace(search,newstr);
+	document.getElementById("replace").value=str3;
+}
+</script>
+
+</body>
+</html>

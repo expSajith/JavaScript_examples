@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div id="demo">
+	<h1 id="head"> </h1>
+	<p id="para"> </p>
+</div>
+	<button type="button" onclick="print();">
+	click for content
+	</button>
+</div>
+<script type="text/javascript">
+	function print()
+	{
+		document.getElementById("head").innerHTML="this is heading";
+		document.getElementById("para").innerHTML="this is paragraph";
+		document.getElementById("para").style.color='red';
+		document.getElementById("para").style.fontSize='40px';
+		window.alert("alert msg");
+	}
+</script>
+</body>
+</html>
